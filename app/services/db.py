@@ -26,3 +26,10 @@ async def fetch_one(query: str, *args):
         raise RuntimeError("DB not initialized")
     async with _pool.acquire() as conn:
         return await conn.fetchrow(query, *args)
+
+
+async def execute(query: str, *args) -> str:
+    if _pool is None:
+        raise RuntimeError("DB not initialized")
+    async with _pool.acquire() as conn:
+        return await conn.execute(query, *args)

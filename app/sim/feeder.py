@@ -29,14 +29,23 @@ class FeederSim:
         self.net = self._load_network(network)
 
     def _load_network(self, name: str):
-        loaders = {
-            "ieee13": pn.case_ieee13,
-            "ieee34": pn.case_ieee34,
-            "ieee123": pn.case_ieee123,
+        normalized = str(name).lower().replace("_", "").replace("-", "")
+
+        # Map common IEEE aliases to pandapower networks
+        alias_map = {
+            "ieee13": "case_ieee13",
+            "ieee34": "case_ieee34",
+            "ieee123": "case_ieee123",
         }
-        if name not in loaders:
-            raise ValueError(f"Unsupported network: {name}")
-        return loaders[name]()
+
+        target_attr = alias_map.get(normalized, normalized)
+        if not hasattr(pn, target_attr):
+            available = sorted([n for n in dir(pn) if n.startswith("case_")])
+            raise ValueError(
+                f"Unsupported network: {name}. Try one of: ieee13, ieee34, ieee123 or pandapower: {available[:10]}..."
+            )
+        loader = getattr(pn, target_attr)
+        return loader()
 
     def run_power_flow(self) -> Dict[str, float]:
         pp.runpp(self.net)

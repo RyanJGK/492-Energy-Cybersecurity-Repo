@@ -37,10 +37,10 @@ async def replay_batch(
                 "CREATE TABLE IF NOT EXISTS telemetry("
                 "device_id text not null, ts timestamptz not null, payload jsonb not null)"
             )
-            await db_service.fetch_one(create_sql)
+            await db_service.execute(create_sql)
             insert_sql = "INSERT INTO telemetry(device_id, ts, payload) VALUES($1,$2,$3)"
             for ev in events:
-                await db_service.fetch_one(insert_sql, ev.device_id, ev.ts, ev.model_dump())
+                await db_service.execute(insert_sql, ev.device_id, ev.ts, ev.model_dump())
                 stored += 1
         except Exception as exc:  # noqa: BLE001
             logger.warning("replay_store_failed", error=str(exc))

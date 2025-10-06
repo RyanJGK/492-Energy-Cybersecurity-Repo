@@ -1,6 +1,7 @@
 from typing import List, Optional
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import Field
 
 
 class Settings(BaseSettings):
@@ -9,7 +10,12 @@ class Settings(BaseSettings):
     Defaults prioritize read-only, simulation-first behavior for safety.
     """
 
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+        case_sensitive=False,
+    )
 
     app_name: str = "OT-DER Telemetry & Simulation API"
     environment: str = "dev"
@@ -37,7 +43,8 @@ class Settings(BaseSettings):
     require_dual_approval: bool = True
 
     # Allowed actions when policy service is unavailable
-    allowed_actions: List[str] = ["ingest", "simulate"]
+    # Use default_factory to avoid mutable default list issues
+    allowed_actions: List[str] = Field(default_factory=lambda: ["ingest", "simulate"])
 
 
 settings = Settings()  # Singleton-style settings instance

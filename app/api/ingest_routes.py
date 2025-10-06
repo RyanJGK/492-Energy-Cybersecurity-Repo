@@ -42,7 +42,7 @@ async def ingest_telemetry(
             """
             # Lazy create table if missing (non-destructive)
             try:
-                await db_service.fetch_one(query, envelope.device_id, envelope.ts, envelope.model_dump())
+                await db_service.execute(query, envelope.device_id, envelope.ts, envelope.model_dump())
                 stored = True
             except Exception:
                 # Attempt to create minimal table and retry once
@@ -50,8 +50,8 @@ async def ingest_telemetry(
                     "CREATE TABLE IF NOT EXISTS telemetry("
                     "device_id text not null, ts timestamptz not null, payload jsonb not null)"
                 )
-                await db_service.fetch_one(create_sql)
-                await db_service.fetch_one(query, envelope.device_id, envelope.ts, envelope.model_dump())
+                await db_service.execute(create_sql)
+                await db_service.execute(query, envelope.device_id, envelope.ts, envelope.model_dump())
                 stored = True
         except Exception as exc:  # noqa: BLE001
             logger.warning("telemetry_store_failed", error=str(exc))
