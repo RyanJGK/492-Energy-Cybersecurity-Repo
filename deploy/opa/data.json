@@ -1,0 +1,5 @@
+{
+  "config": {
+    "allowed_actions": ["ingest", "simulate"]
+  }
+}
