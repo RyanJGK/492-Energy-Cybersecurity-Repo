@@ -1,0 +1,8 @@
+{
+  "description": "Sample PV curtailment scenario over three steps",
+  "steps": [
+    { "p_kw_limit": 800, "note": "High output" },
+    { "p_kw_limit": 500, "note": "Moderate curtailment" },
+    { "p_kw_limit": 200, "note": "Strong curtailment" }
+  ]
+}

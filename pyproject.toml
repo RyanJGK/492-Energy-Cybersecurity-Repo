@@ -18,6 +18,8 @@ dependencies = [
     "asyncio-mqtt>=0.16,<0.17",
     "asyncpg>=0.29,<0.30",
     "structlog>=24.1,<25.0",
+    "typer>=0.12,<0.13",
+    "rich>=13.7,<14.0",
 ]
 
 [project.optional-dependencies]
@@ -27,6 +29,9 @@ ray = ["ray[default]>=2.32,<3.0"]
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["app*"]
+
+[project.scripts]
+der-sim = "app.cli:main"
 
 [tool.pytest.ini_options]
 addopts = "-q"
