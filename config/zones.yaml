@@ -1,0 +1,14 @@
+# Zone definitions for UnauthorizedZonalFlowRule
+zones:
+  - name: IT
+    cidrs: ["10.0.0.0/8", "172.16.0.0/12"]
+  - name: OT
+    cidrs: ["10.10.0.0/16", "192.168.100.0/24"]
+  - name: DMZ
+    cidrs: ["192.168.50.0/24"]
+
+allowed_flows:
+  - src_zone: IT
+    dst_zone: DMZ
+  - src_zone: DMZ
+    dst_zone: OT
