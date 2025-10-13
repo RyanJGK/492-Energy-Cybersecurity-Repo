@@ -1,0 +1,116 @@
+# Template configuration for Energy Sector ICS Security Monitoring System
+# Copy this file per environment and fill in secrets via secret manager references.
+
+metadata:
+  system_name: "ics-security-monitoring"
+  version: "0.1.0"
+  owners:
+    - soc@energyco.example
+    - otsec@energyco.example
+
+# Database configuration
+# Use separate read-only accounts for OT collectors to enforce least privilege.
+database:
+  app_db:
+    host: "postgres.example"
+    port: 5432
+    database: "ics_security"
+    # Use secret references, not inline passwords
+    write_creds_ref: "vault:secret/data/ics/app_db_write"
+    read_creds_ref: "vault:secret/data/ics/app_db_read"
+  ot_collector_db:
+    host: "postgres.example"
+    port: 5432
+    database: "ics_security"
+    read_only_creds_ref: "vault:secret/data/ics/ot_collector_read"
+
+# Kafka broker addresses per environment
+kafka:
+  schema_registry:
+    url: "http://schema-registry.example:8081"
+  brokers:
+    lab:
+      - "kafka-lab-1:9092"
+      - "kafka-lab-2:9092"
+    staging:
+      - "kafka-stg-1:9092"
+      - "kafka-stg-2:9092"
+      - "kafka-stg-3:9092"
+    limited-prod:
+      - "kafka-lp-1:9092"
+      - "kafka-lp-2:9092"
+      - "kafka-lp-3:9092"
+    full-prod:
+      - "kafka-p-1:9092"
+      - "kafka-p-2:9092"
+      - "kafka-p-3:9092"
+      - "kafka-p-4:9092"
+  topics_ref: "./kafka_topics.yaml"
+
+# Alert routing configuration per severity and domain
+alerts:
+  slack:
+    info_channel: "#sec-info"
+    low_channel: "#sec-low"
+    medium_channel: "#sec-medium"
+    high_channel: "#sec-high"
+    critical_channel: "#sec-critical"
+    webhook_ref: "vault:secret/data/ics/slack_webhook"
+  pagerduty:
+    service_id: "PXXXXXX"
+    routing_keys:
+      high_ref: "vault:secret/data/ics/pd_high"
+      critical_ref: "vault:secret/data/ics/pd_critical"
+
+# Policy thresholds balancing safety, security, and availability
+policy:
+  ip_rate_limits:
+    # Requests per 5 minutes per IP
+    window_seconds: 300
+    max_auth_requests: 50
+    max_email_sends: 100
+  token_expiry:
+    email_verification_minutes: 30
+    session_token_hours: 12
+  velocity_windows:
+    signin_fail_burst: {window_seconds: 300, threshold: 10}
+    otp_requests: {window_seconds: 900, threshold: 5}
+
+# Compliance & data governance settings to satisfy NERC CIP, IEC 62443, NIST SP 800-82
+compliance:
+  pii_retention_days:
+    auth_events: 30
+    email_events: 14
+    ot_events: 7
+  pii_hashing:
+    algorithm: "sha256"
+    salt_ref: "vault:secret/data/ics/pii_salt"
+  logging:
+    # Exclude secrets and sensitive payloads from logs
+    redaction: ["password", "token", "authorization", "cookie"]
+  audit:
+    # Enable audit logs for access to sensitive topics and DB tables
+    enabled: true
+    sink: "s3://energyco-audit-logs/{env}/"
+
+# Services and runtime
+services:
+  email_verification_agent:
+    consume_topic: "auth-verification-events"
+    consumer_group: "{env}.email-verification-agent.v1"
+    produce_alerts_topic: "alerts"
+  email_recording_agent:
+    source: "postgres"
+    consumer_group: "{env}.email-recording-agent.v1"
+  ot_tracking_agent:
+    input: "SPAN/TAP"
+    produce_topic: "ot-network-events"
+    consumer_group: "{env}.ot-tracking-agent.v1"
+
+# Observability
+observability:
+  metrics:
+    prometheus_endpoint: "/metrics"
+  tracing:
+    enabled: true
+    otlp_endpoint: "http://otel-collector:4317"
