@@ -1,0 +1,32 @@
+[
+  {
+    "name": "CompromisedAccountOTAccess",
+    "severity": "Critical",
+    "kind": "Scheduled",
+    "query": "let Abuse=SecurityEvent | where Rule in ('TokenReuseRule','VelocityRule') | project User, TimeGenerated; let OT=SigninLogs | where Resource == 'OT' and (hourofday(TimeGenerated) < 7 or hourofday(TimeGenerated) > 19) | project UserPrincipalName, TimeGenerated; Abuse | join kind=innerunique (OT) on $left.User == $right.UserPrincipalName | where abs(datetime_diff('minute', TimeGenerated, TimeGenerated1)) <= 60;",
+    "queryFrequency": "PT5M",
+    "queryPeriod": "PT2H",
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0
+  },
+  {
+    "name": "UnusualEngineeringActivity",
+    "severity": "High",
+    "kind": "Scheduled",
+    "query": "let HMI = SigninLogs | where Role == 'engineering'; let Email = EmailEvents | where Type == 'AuthVerificationRequested' | summarize VerifCount=count() by User, bin(TimeGenerated, 1h); HMI | summarize HMICount=count() by User, bin(TimeGenerated, 1h) | join kind=leftouter (Email) on User, TimeGenerated | where VerifCount > 50 and HMICount > 10;",
+    "queryFrequency": "PT1H",
+    "queryPeriod": "PT24H",
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0
+  },
+  {
+    "name": "ZonalBoundaryBreach",
+    "severity": "High",
+    "kind": "Scheduled",
+    "query": "let Allowed = externaldata(src_zone:string,dst_zone:string)[@""https://example.com/allowed_zones.csv""] with (format='csv'); let FW = CommonSecurityLog | where DeviceAction == 'allow'; let OT = OTNetwork | where isnotempty(Protocol); FW | join kind=inner OT on SrcIpAddr, DstIpAddr | where not ((SrcZone == 'IT' and DstZone=='DMZ') or (SrcZone=='DMZ' and DstZone=='OT'));",
+    "queryFrequency": "PT10M",
+    "queryPeriod": "PT1H",
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0
+  }
+]
