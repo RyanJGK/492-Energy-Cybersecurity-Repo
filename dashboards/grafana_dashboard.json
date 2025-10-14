@@ -1,0 +1,65 @@
+{
+  "title": "ICS Security Monitoring",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Email Verification Funnel",
+      "targets": [
+        {"expr": "sum(rate(email_verification_requested_total[5m]))"},
+        {"expr": "sum(rate(email_sent_total[5m]))"},
+        {"expr": "sum(rate(email_opened_total[5m]))"},
+        {"expr": "sum(rate(email_confirmed_total[5m]))"}
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Bounce/Complaint Rates",
+      "targets": [
+        {"expr": "sum by(domain) (rate(email_bounce_total[5m])) / sum by(domain) (rate(email_sent_total[5m]))"}
+      ],
+      "thresholds": [{"value": 0.05, "color": "red"}]
+    },
+    {
+      "type": "gauge",
+      "title": "Auth DB Data Quality - Completeness %",
+      "targets": [{"expr": "avg(completeness_percent)"}],
+      "thresholds": [{"value": 99.5, "color": "red"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "OT Asset Coverage %",
+      "targets": [{"expr": "100 * count(assets_observed) / count(assets_expected)"}]
+    },
+    {
+      "type": "bargauge",
+      "title": "Alert Volume by Rule/Severity",
+      "targets": [{"expr": "sum by(rule,severity) (rate(alerts_fired_total[5m]))"}]
+    },
+    {
+      "type": "stat",
+      "title": "False Positive % vs SLO",
+      "targets": [{"expr": "100 * fp_alerts_total / alerts_fired_total"}],
+      "thresholds": [{"value": 2, "color": "red"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "IT Alert Latency P50/P95/P99",
+      "targets": [
+        {"expr": "histogram_quantile(0.5, sum(rate(it_alert_latency_ms_bucket[5m])) by (le))"},
+        {"expr": "histogram_quantile(0.95, sum(rate(it_alert_latency_ms_bucket[5m])) by (le))"},
+        {"expr": "histogram_quantile(0.99, sum(rate(it_alert_latency_ms_bucket[5m])) by (le))"}
+      ],
+      "thresholds": [{"value": 60000, "color": "red"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "OT Alert Latency P50/P95/P99",
+      "targets": [
+        {"expr": "histogram_quantile(0.5, sum(rate(ot_alert_latency_ms_bucket[5m])) by (le))"},
+        {"expr": "histogram_quantile(0.95, sum(rate(ot_alert_latency_ms_bucket[5m])) by (le))"},
+        {"expr": "histogram_quantile(0.99, sum(rate(ot_alert_latency_ms_bucket[5m])) by (le))"}
+      ],
+      "thresholds": [{"value": 300000, "color": "red"}]
+    }
+  ]
+}

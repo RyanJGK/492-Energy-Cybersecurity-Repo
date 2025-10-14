@@ -1,0 +1,120 @@
+# Kafka topic configuration for Energy Sector ICS Security Monitoring System
+# Partition strategies and topics
+
+# Naming conventions
+# - Use kebab-case for topic names
+# - Suffix with version if schema evolves: e.g., auth-verification-events-v2
+# - Consumers should use stable consumer group names with environment prefix
+
+# Retention policies are balancing safety, security, and availability. Identity/email events
+# are retained longer for auditability and fraud investigations; OT network frames are
+# retained shorter for cost and due to high volume, with summaries exported to a data lake.
+
+brokers:
+  lab:
+    - kafka-lab-1:9092
+    - kafka-lab-2:9092
+  staging:
+    - kafka-stg-1:9092
+    - kafka-stg-2:9092
+    - kafka-stg-3:9092
+  limited-prod:
+    - kafka-lp-1:9092
+    - kafka-lp-2:9092
+    - kafka-lp-3:9092
+  full-prod:
+    - kafka-p-1:9092
+    - kafka-p-2:9092
+    - kafka-p-3:9092
+    - kafka-p-4:9092
+
+# Topic definitions
+
+topics:
+  auth-verification-events:
+    partitions: 12
+    replication_factor:
+      lab: 1
+      staging: 2
+      limited-prod: 3
+      full-prod: 3
+    retention:
+      ms: 2592000000  # 30 days
+      compact: false
+    partitioner: key
+    key_by: user_id  # partition by user_id
+    cleanup_policy: delete
+    min_insync_replicas:
+      lab: 1
+      staging: 2
+      limited-prod: 2
+      full-prod: 2
+    notes: |
+      - Contains: AuthVerificationRequested, SignInSucceeded, SignInFailed
+      - Use schema registry with compatibility: BACKWARD
+      - PII handling must follow PII retention policy from config.yaml
+
+  email-delivery-events:
+    partitions: 12
+    replication_factor:
+      lab: 1
+      staging: 2
+      limited-prod: 3
+      full-prod: 3
+    retention:
+      ms: 1209600000  # 14 days
+      compact: false
+    partitioner: custom
+    partitioner_logic: domain  # partition by recipient domain
+    cleanup_policy: delete
+    min_insync_replicas:
+      lab: 1
+      staging: 2
+      limited-prod: 2
+      full-prod: 2
+    notes: |
+      - Contains: EmailSent, EmailBounced
+      - Enable dead-letter topic: email-delivery-events-dlq
+
+  ot-network-events:
+    partitions: 24
+    replication_factor:
+      lab: 1
+      staging: 2
+      limited-prod: 3
+      full-prod: 3
+    retention:
+      ms: 604800000  # 7 days
+      compact: false
+    partitioner: key
+    key_by: protocol  # partition by protocol
+    cleanup_policy: delete
+    min_insync_replicas:
+      lab: 1
+      staging: 2
+      limited-prod: 2
+      full-prod: 2
+    notes: |
+      - Contains: OTProtocolFrame
+      - Extremely high-volume; export to cold storage hourly
+
+# Consumer group naming conventions
+consumer_groups:
+  prefix_by_env:
+    lab: lab
+    staging: stg
+    limited-prod: lp
+    full-prod: prod
+  examples:
+    - "stg.email-verification-agent.v1"
+    - "prod.ot-analytics-service.v2"
+    - "lp.email-recording-agent.v1"
+
+# Default topic-level configuration recommended
+kafka_defaults:
+  message_timestamp: CreateTime
+  compression_type: zstd
+  acks: all
+  max_message_bytes: 1048576  # 1 MiB
+  linger_ms: 10
+  batch_size: 32768

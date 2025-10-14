@@ -1,0 +1,60 @@
+# SOAR playbooks for high-severity alerts
+
+- name: CompromisedAccountOTAccess
+  severity: CRITICAL
+  triggers:
+    - source: SIEM
+      rule: CompromisedAccountOTAccess
+  actions:
+    - type: slack.notify
+      channel: "#sec-critical"
+      message: "CRITICAL: Compromised account attempting OT access for user {{user}}"
+    - type: ticket.create
+      system: jira
+      project: SEC
+      summary: "Compromised account OT access: {{user}}"
+      labels: ["ics", "critical"]
+    - type: pagerduty.page
+      service: soc-oncall
+      delay_minutes: 5
+    - type: attach.mitre
+      framework: ATT&CK-ICS
+      techniques: ["T0855", "T0831"]
+
+- name: UnusualEngineeringActivity
+  severity: HIGH
+  triggers:
+    - source: SIEM
+      rule: UnusualEngineeringActivity
+  actions:
+    - type: slack.notify
+      channel: "#sec-high"
+      message: "High: Unusual engineering activity for user {{user}}"
+    - type: ticket.create
+      system: jira
+      project: SEC
+      summary: "Unusual engineering activity: {{user}}"
+      labels: ["ics"]
+    - type: attach.mitre
+      framework: ATT&CK-ICS
+      techniques: ["T0828", "T0851"]
+
+- name: ZonalBoundaryBreach
+  severity: HIGH
+  triggers:
+    - source: SIEM
+      rule: ZonalBoundaryBreach
+  actions:
+    - type: slack.notify
+      channel: "#sec-high"
+      message: "High: Zonal boundary breach detected from {{src_ip}} to {{dst_ip}}"
+    - type: ticket.create
+      system: servicenow
+      assignment_group: ICS-Sec
+      short_description: "Zonal boundary breach"
+      additional_fields:
+        src_ip: "{{src_ip}}"
+        dst_ip: "{{dst_ip}}"
+    - type: attach.mitre
+      framework: ATT&CK-ICS
+      techniques: ["T0884", "T0887"]
