@@ -1,0 +1,205 @@
+type,user_id,email,ip,device_fingerprint,timestamp,token_created_at,geo
+login_success,user_019,user019@example.com,186.77.215.151,99e275d111e04d6388045ee4e85e64ba,2025-10-13T16:42:31,2025-10-13T15:43:27,US:New York
+password_reset,user_045,user045@example.com,142.251.32.4,d6543cec07634f8a92348d89615813e7,2025-10-11T09:00:00,2025-10-11T08:58:00,GB:London
+suspicious_login,user_049,user049@example.com,46.130.234.28,f74ae2f537994c24a6da045a850a09fe,2025-10-07T16:53:40,,US:New York
+suspicious_login,user_033,user033@example.com,55.40.169.124,040106dc09d44eb2a1bc368b0e20e91b,2025-10-06T02:54:06,,DE:Berlin
+token_refresh,user_029,user029@example.com,162.78.204.71,d98c636585da4ad69921ee5c841dcd67,2025-10-13T22:03:22,2025-10-13T21:28:44,US:Los Angeles
+suspicious_login,user_007,user007@example.com,13.167.139.215,902783570388490597e25d6315c1a39f,2025-10-01T15:05:59,,CN:Shanghai
+password_reset,user_028,user028@example.com,106.120.222.187,f2553ca02765449cb77a9f5d51fc9d43,2025-10-02T11:43:41,2025-10-02T10:59:35,US:Los Angeles
+login_success,user_005,user005@example.com,138.55.130.68,8f0e07457dc7418bbb600bc2809e161a,2025-10-04T03:59:22,2025-10-04T03:54:41,CA:Toronto
+token_refresh,user_032,user032@example.com,143.195.62.177,0ce5760ba15c444db8095f1d7a438d60,2025-10-11T11:41:45,2025-10-11T11:08:15,IN:Bengaluru
+suspicious_login,user_021,user021@example.com,240.67.53.172,82e5aa810bb241c6b79d1f575c741adc,2025-10-08T00:15:16,,AU:Sydney
+password_reset,user_044,user044@example.com,194.185.197.169,161e3d66261549ffa714ce0fbacaaf06,2025-10-04T06:40:06,2025-10-04T05:57:16,NL:Amsterdam
+account_locked,user_041,user041@example.com,219.68.130.126,2c0dcf91e22545e898c218dce25deca8,2025-10-06T16:57:58,,US:Seattle
+login_failure,user_048,user048@example.com,237.86.201.239,4a2c2373d79e4040a5eca6e5af04e62f,2025-10-10T02:51:42,,AU:Sydney
+login_failure,user_052,user052@example.com,246.179.133.119,b263e6cdb6b54a7b8eddb6021e7c653e,2025-10-02T09:35:15,,US:Los Angeles
+password_reset,user_018,user018@example.com,40.56.246.196,e4dc51328d3c4a34b8e8a2dab2ad9eae,2025-10-08T12:06:05,2025-10-08T11:40:09,US:Los Angeles
+login_failure,user_032,user032@example.com,55.91.205.67,9427452fd9c340f1980d1cdcabe9240d,2025-10-08T14:17:56,,BR:São Paulo
+login_success,user_054,user054@example.com,22.24.111.25,a3db4947a0ac497aa94b2413a9d098cf,2025-10-09T06:51:08,2025-10-09T06:13:10,US:Seattle
+token_refresh,user_055,user055@example.com,206.143.94.24,f8866178ebfc4c18bdad7795b24e218b,2025-10-09T18:00:16,2025-10-09T17:23:39,US:Los Angeles
+login_success,user_015,user015@example.com,211.9.207.81,826507116c9743ceaf965ef7d4d8ad18,2025-10-09T21:17:04,2025-10-09T21:02:40,BR:São Paulo
+password_reset,user_021,user021@example.com,172.27.220.42,444cb5cce8a44edda0ae66215f7ef254,2025-10-08T08:26:44,2025-10-08T07:52:55,GB:London
+login_success,user_004,user004@example.com,150.123.129.236,5c562b6da68f4056ac4267a5e419f705,2025-10-12T15:10:03,2025-10-12T14:35:23,US:Los Angeles
+account_locked,user_012,user012@example.com,50.56.190.124,eb8ada4267f5495f91473ecce623d1f8,2025-10-07T05:46:37,,CN:Shanghai
+token_refresh,user_007,user007@example.com,111.246.93.163,7108a45b08ea42d89ca069b979537583,2025-10-11T03:45:09,2025-10-11T03:15:26,US:New York
+login_success,user_010,user010@example.com,18.205.93.12,8c0c728fb0f6424c8c0ecd41b48ef841,2025-10-13T22:06:10,2025-10-13T22:06:05,US:Seattle
+account_locked,user_026,user026@example.com,209.195.141.10,f956bbff7dc245b99c94d413cb1e7dcd,2025-10-11T00:05:20,,GB:London
+login_success,user_026,user026@example.com,187.87.205.221,b94b0b1567d8429399cf8a52c7ea466b,2025-10-03T15:15:12,2025-10-03T15:02:13,CN:Shanghai
+login_failure,user_017,user017@example.com,12.182.112.1,15d14b1b2b41498ca29869767edf6be8,2025-10-12T10:59:51,,CN:Shanghai
+suspicious_login,user_030,user030@example.com,136.65.249.142,be03af547015462b9874521377fd3823,2025-10-01T13:43:46,,US:Los Angeles
+account_locked,user_034,user034@example.com,248.167.70.158,0fbefd09b9a14e64b9b6fa0b7f924189,2025-10-12T19:49:30,,IN:Bengaluru
+password_reset,user_039,user039@example.com,65.7.24.59,45062316626746eba82c72ee63bdb54f,2025-10-13T14:37:01,2025-10-13T13:44:49,NL:Amsterdam
+login_success,user_017,user017@example.com,241.221.123.30,4701aed1e2ac4e68a51f242cfc05b19f,2025-10-02T17:25:31,2025-10-02T17:20:28,BR:São Paulo
+login_success,user_051,user051@example.com,180.30.219.168,e67298202e5d41248df524d1df3576ad,2025-10-13T02:46:55,2025-10-13T02:32:15,RU:Moscow
+login_failure,user_019,user019@example.com,56.248.15.149,44417f81d8294b3789ee74d6f594ba41,2025-10-12T21:03:47,,DE:Berlin
+suspicious_login,user_037,user037@example.com,122.63.201.122,4e0ccc6cff9c46a9933df628d1d0dad1,2025-10-10T00:12:06,,US:Los Angeles
+login_success,user_010,user010@example.com,41.194.159.13,70bf638340164b079cc2361e469e1e8f,2025-10-03T01:17:28,2025-10-03T00:32:17,RU:Moscow
+token_refresh,user_018,user018@example.com,3.145.222.176,6e155b12839c477ba875606fc406d09f,2025-10-02T09:58:38,2025-10-02T09:07:46,IN:Bengaluru
+password_reset,user_020,user020@example.com,65.60.31.185,28f6344e7b35462fbaed2c48f63da935,2025-10-05T10:20:07,2025-10-05T09:29:25,CN:Shanghai
+token_refresh,user_007,user007@example.com,224.4.147.73,b4af0730a52f443298c4a9e98ca2b3ac,2025-10-11T08:30:28,2025-10-11T08:07:13,US:New York
+token_refresh,user_060,user060@example.com,184.75.131.181,6292cfd761be4e119ce820723d0ab6b2,2025-10-07T03:26:53,2025-10-07T02:53:57,IN:Bengaluru
+suspicious_login,user_039,user039@example.com,130.99.119.149,6f2804eab2524a439ce5ac772bee36e4,2025-10-13T03:50:47,,NL:Amsterdam
+account_locked,user_021,user021@example.com,98.153.136.76,9e90a6c35508422aa0c005c5397c32b5,2025-10-11T00:32:38,,RU:Moscow
+account_locked,user_005,user005@example.com,163.211.119.233,497eac09236b4a4484f8f693139b46c1,2025-10-07T18:41:26,,US:Los Angeles
+token_refresh,user_022,user022@example.com,41.95.80.185,909a2ad9ddd14d4fbe667af2a3215f16,2025-10-08T06:49:36,2025-10-08T06:08:54,US:Los Angeles
+account_locked,user_058,user058@example.com,39.140.10.214,2881e5ac7a8a44a78af70334fee9a689,2025-10-09T05:37:35,,US:New York
+token_refresh,user_024,user024@example.com,173.192.173.68,7277df57931541e3860410a1712d237c,2025-10-13T19:24:52,2025-10-13T18:41:17,DE:Berlin
+account_locked,user_059,user059@example.com,93.23.112.217,3428aec9c26d4809ba7336471c6e2b68,2025-10-03T14:15:27,,BR:São Paulo
+account_locked,user_047,user047@example.com,241.190.189.172,283611f2f52a4f3cbafd60f0221aa967,2025-10-05T12:23:27,,US:Los Angeles
+password_reset,user_054,user054@example.com,43.66.234.212,8563b94674b548aeb7e096fea754c620,2025-10-11T14:51:18,2025-10-11T14:00:21,DE:Berlin
+token_refresh,user_024,user024@example.com,57.36.131.127,d5f8618061c741a1bd4f36007dfd14f1,2025-10-03T06:48:03,2025-10-03T05:49:16,US:Los Angeles
+password_reset,user_008,user008@example.com,196.72.147.58,ddd81a41d60541f7ac8839e22b126238,2025-10-10T11:54:35,2025-10-10T11:02:12,BR:São Paulo
+login_failure,user_038,user038@example.com,247.252.68.10,a76c954568484ae8b3873a78c675c0ad,2025-10-03T15:38:27,,DE:Berlin
+password_reset,user_049,user049@example.com,42.139.245.200,ecd5fe807a614ddaa92162f98afcdbce,2025-10-12T15:58:00,2025-10-12T15:17:07,DE:Berlin
+account_locked,user_057,user057@example.com,71.143.3.133,c0c39509c2c04d718674321349192987,2025-10-05T09:05:15,,AU:Sydney
+password_reset,user_030,user030@example.com,81.238.193.240,421cd166647e4062aeacb2bc65fe1c66,2025-10-02T21:00:29,2025-10-02T20:18:05,BR:São Paulo
+login_failure,user_016,user016@example.com,45.142.20.41,c7717ba3a9974add98c4dae4edc3ce5c,2025-10-01T09:26:28,,AU:Sydney
+token_refresh,user_046,user046@example.com,234.208.98.99,4d444b61774e4d0596c8057d676ae168,2025-10-04T13:31:02,2025-10-04T13:22:25,CN:Shanghai
+login_success,user_002,user002@example.com,250.162.156.205,1bf8b9ac78964d5a9b0ecd40578ba2f5,2025-10-06T10:45:10,2025-10-06T10:23:58,CN:Shanghai
+login_success,user_040,user040@example.com,40.62.33.122,43cd4569e1b344e49c225d9f41386c98,2025-10-03T18:36:13,2025-10-03T18:04:29,AU:Sydney
+suspicious_login,user_048,user048@example.com,189.140.205.155,a615aef72de34270808e10613342161e,2025-10-06T00:31:14,,US:Seattle
+token_refresh,user_027,user027@example.com,227.162.148.50,96ddba288ef4461ca1682f8a42299d2c,2025-10-09T12:31:25,2025-10-09T12:14:46,US:New York
+login_failure,user_013,user013@example.com,210.236.118.90,a3ed17c2f4514d5c9c5e37f86412b855,2025-10-07T20:52:50,,CA:Toronto
+token_refresh,user_019,user019@example.com,109.179.246.188,5fdbab63056e4f799f0fc42629ad72be,2025-10-13T04:42:45,2025-10-13T04:09:32,US:New York
+password_reset,user_044,user044@example.com,174.152.125.135,0988ad52cbd54c1b9d7cf26dded1afe1,2025-10-07T21:02:14,2025-10-07T20:35:16,BR:São Paulo
+login_failure,user_022,user022@example.com,199.38.202.231,8c5bf3af4e75422ab88873131a741bd3,2025-10-14T01:00:17,,US:New York
+account_locked,user_040,user040@example.com,83.222.249.161,20751e7a1f894b618ec076837e7debc6,2025-10-08T01:09:28,,US:Los Angeles
+login_success,user_001,user001@example.com,53.78.243.55,4005d775baa54244899ede939c7f54f2,2025-10-04T06:48:16,2025-10-04T06:28:31,DE:Berlin
+account_locked,user_016,user016@example.com,71.113.20.183,bb6492ca96a64d0f871a40246949de1e,2025-10-07T10:15:17,,DE:Berlin
+token_refresh,user_027,user027@example.com,14.49.133.93,20e74f07b64047d383aec35e382ec5d0,2025-10-11T23:40:28,2025-10-11T22:48:36,US:Seattle
+login_success,user_043,user043@example.com,210.142.77.239,34b19840340f4c54b5218da4382af855,2025-10-03T13:56:08,2025-10-03T13:38:05,US:Los Angeles
+suspicious_login,user_049,user049@example.com,69.197.165.88,c54881f444f6449c8e23f4fce4247d70,2025-10-03T17:18:27,,DE:Berlin
+password_reset,user_055,user055@example.com,89.155.68.207,8a91c52e77834ec29eae06d63248c919,2025-10-02T06:46:29,2025-10-02T06:09:53,US:Los Angeles
+login_failure,user_035,user035@example.com,65.205.45.29,8e461c56785c4b4293f7553846ed6b1a,2025-10-01T21:08:00,,DE:Berlin
+login_success,user_036,user036@example.com,196.107.156.153,12032d6a4c1a4a5c9c80ce1ba47d5ecb,2025-10-06T03:49:33,2025-10-06T03:23:35,IN:Bengaluru
+token_refresh,user_009,user009@example.com,11.79.94.231,c0c286ccbf454a018105d12c58380b93,2025-10-02T04:57:22,2025-10-02T04:43:02,NL:Amsterdam
+suspicious_login,user_008,user008@example.com,191.17.122.115,3f9c5aaf3eea41dcb49fd3b4460597f0,2025-10-09T01:32:37,,GB:London
+login_failure,user_010,user010@example.com,7.12.63.252,64d6e5f1a1fb47e2842997fd03a1210e,2025-10-11T11:39:54,,US:Los Angeles
+suspicious_login,user_048,user048@example.com,212.146.236.74,f6303eb3edb242ebbf71b53d3ad34b0a,2025-10-10T16:07:29,,RU:Moscow
+login_failure,user_002,user002@example.com,169.50.103.85,51efca67c4ad45c8b71214e0ec645ecc,2025-10-07T06:55:04,,GB:London
+login_success,user_044,user044@example.com,60.121.7.159,ae42419ef6494f45a2899b9d89a947dd,2025-10-13T07:20:58,2025-10-13T06:39:20,CA:Toronto
+token_refresh,user_019,user019@example.com,30.104.6.248,25e08bde64ad43a99bcb8492f18f94da,2025-10-08T06:10:51,2025-10-08T05:28:40,IN:Bengaluru
+login_failure,user_038,user038@example.com,83.5.45.68,00bedf11823740e4aaa93bffe946ca25,2025-10-02T10:08:47,,RU:Moscow
+token_refresh,user_057,user057@example.com,59.106.87.212,e307b60dda994eb39c43c1e045375c50,2025-10-11T00:25:26,2025-10-10T23:35:38,US:Los Angeles
+login_success,user_031,user031@example.com,217.103.110.176,bf48e64a7f9844f68fab5955f1b9ee66,2025-10-03T15:31:45,2025-10-03T15:01:29,US:Los Angeles
+account_locked,user_021,user021@example.com,55.168.128.102,8f1e2241c09b4af2ab1d083845cb8872,2025-10-11T02:09:16,,US:New York
+suspicious_login,user_044,user044@example.com,203.47.44.45,33e7048f66e240ca8ba3d2fb69f08e98,2025-10-03T00:39:55,,CA:Toronto
+login_success,user_033,user033@example.com,163.30.136.131,89c5337a547f4fb5a35636d79d6f57fd,2025-10-05T11:57:49,2025-10-05T11:33:58,DE:Berlin
+password_reset,user_028,user028@example.com,81.171.66.96,52d6c53c0d9d4ec99e4c4de8cffea87a,2025-10-04T14:43:59,2025-10-04T14:11:37,US:Los Angeles
+password_reset,user_035,user035@example.com,231.251.166.92,31834a0822644b8d9061ffdd2c7759aa,2025-10-02T15:25:17,2025-10-02T15:12:20,US:Los Angeles
+token_refresh,user_036,user036@example.com,136.89.109.191,426b5968f0e644399362539efc535248,2025-10-13T01:21:22,2025-10-13T00:33:24,IN:Bengaluru
+login_failure,user_004,user004@example.com,67.98.84.55,753bc467938a49a68293141c7d46ddf3,2025-10-11T00:20:21,,RU:Moscow
+login_success,user_036,user036@example.com,105.24.58.216,22f685d054b349adb7a51288856f7155,2025-10-03T18:29:07,2025-10-03T17:44:54,US:New York
+account_locked,user_013,user013@example.com,83.155.122.129,96d89330eb424f0997986c616032208d,2025-10-04T13:03:28,,US:Los Angeles
+login_failure,user_048,user048@example.com,144.138.68.192,77dbe25e3de34027b539010f4aaf4d20,2025-10-13T19:27:57,,BR:São Paulo
+password_reset,user_049,user049@example.com,244.213.108.65,d7586682ef514732ab8f92bc2d7b0d00,2025-10-03T01:30:01,2025-10-03T00:38:53,CN:Shanghai
+account_locked,user_056,user056@example.com,26.114.43.178,6cd13b19aa5b4ec89fa5fe0d680204dd,2025-10-07T17:57:01,,US:Seattle
+token_refresh,user_039,user039@example.com,114.107.70.56,58bf0607c14043f8bc9171e25db3ce1b,2025-10-12T06:07:22,2025-10-12T05:38:02,US:Los Angeles
+login_success,user_041,user041@example.com,109.213.71.12,000fbf0416094d71940206950c73595b,2025-10-01T09:21:49,2025-10-01T09:12:54,NL:Amsterdam
+token_refresh,user_020,user020@example.com,221.151.254.110,e41172d5883e4013a21a6744226580ca,2025-10-07T20:36:39,2025-10-07T20:32:33,BR:São Paulo
+login_failure,user_005,user005@example.com,153.18.173.221,251dafa8a14e4b7c9ccb8e7937f2c925,2025-10-06T08:25:07,,BR:São Paulo
+suspicious_login,user_003,user003@example.com,187.201.233.222,ac7c6bf267a2493b99bfd8f0ac4dd91b,2025-10-12T10:19:29,,NL:Amsterdam
+token_refresh,user_034,user034@example.com,21.102.223.80,c304c2d45a474844bd2f2ec308665337,2025-10-08T13:14:21,2025-10-08T12:21:10,US:New York
+login_success,user_001,user001@example.com,128.192.111.45,216ecb53d0b1415aa09a61c7d842dde8,2025-10-04T02:24:34,2025-10-04T01:36:32,CA:Toronto
+password_reset,user_051,user051@example.com,203.161.151.170,aa87e601fb44421e9663339000f4ccb5,2025-10-05T13:27:07,2025-10-05T12:49:57,CA:Toronto
+account_locked,user_007,user007@example.com,243.196.54.161,779ebc1cd55745428717fc9e085ecb77,2025-10-05T20:16:42,,US:Los Angeles
+suspicious_login,user_010,user010@example.com,203.119.62.1,68aa41df802a455f8751f71f9dc1ea25,2025-10-13T22:05:02,,CN:Shanghai
+login_failure,user_038,user038@example.com,112.163.209.126,afaeac56fe8a40069cf90acf41bd580d,2025-10-03T06:30:22,,RU:Moscow
+suspicious_login,user_044,user044@example.com,165.143.7.156,623503e4e8fc49eaa299d4f8232cf684,2025-10-07T00:01:11,,GB:London
+login_failure,user_005,user005@example.com,107.105.85.139,e3ef44161ad14da1b5fdae9b7ab3fc8d,2025-10-11T06:26:03,,CA:Toronto
+login_success,user_006,user006@example.com,188.125.209.18,3fd50bc26c3644be91b7d26c1450670f,2025-10-12T16:49:08,2025-10-12T16:40:23,NL:Amsterdam
+token_refresh,user_053,user053@example.com,188.152.69.83,0ff7b10be500417984c9360fcbad04a6,2025-10-06T13:53:59,2025-10-06T13:48:05,GB:London
+suspicious_login,user_036,user036@example.com,214.172.207.91,fc1abd5376da4493a20c2db6d5b7fe65,2025-10-02T20:25:55,,US:Seattle
+login_failure,user_015,user015@example.com,130.155.7.144,7695447dbd6644c1b8a852fc17557ae1,2025-10-05T13:45:41,,AU:Sydney
+token_refresh,user_009,user009@example.com,206.119.171.136,09746e9cb33243a38e2dba147a93f73b,2025-10-13T06:38:20,2025-10-13T05:46:47,IN:Bengaluru
+password_reset,user_050,user050@example.com,95.43.156.156,6a9144d55c654c938b0906935a3e9e00,2025-10-03T18:49:52,2025-10-03T18:38:42,GB:London
+login_failure,user_003,user003@example.com,243.10.78.127,d589098cb470448cbcd7bc507272113e,2025-10-03T19:06:15,,CN:Shanghai
+token_refresh,user_006,user006@example.com,142.76.213.161,d3b40b6150d244d597022ba0614b0e11,2025-10-09T01:36:12,2025-10-09T00:48:07,US:Los Angeles
+password_reset,user_008,user008@example.com,249.198.104.222,cc306d4a429e44d4a47d95c6ec55211e,2025-10-12T07:52:00,2025-10-12T07:07:07,CN:Shanghai
+account_locked,user_008,user008@example.com,7.190.71.63,f81f4af1a9f54613b5a553d19b46cb97,2025-10-06T02:08:47,,US:Los Angeles
+token_refresh,user_006,user006@example.com,170.55.165.164,dd102fc632374f7a997cc24dbe98bd93,2025-10-14T01:01:03,2025-10-14T00:07:21,DE:Berlin
+token_refresh,user_031,user031@example.com,2.242.91.77,b9b9658ac7234eaf8e0ef489ff6efb44,2025-10-09T15:54:57,2025-10-09T14:57:54,RU:Moscow
+password_reset,user_033,user033@example.com,139.127.113.21,9e0179296d944a9e8243baebcf24481f,2025-10-14T02:02:56,2025-10-14T01:33:27,AU:Sydney
+account_locked,user_041,user041@example.com,159.86.24.210,c988af94d7f843cba1447fbbd5388f40,2025-10-06T08:43:19,,CA:Toronto
+password_reset,user_042,user042@example.com,131.103.174.252,f612c4d78105423fb3443bb142f63ad1,2025-10-12T18:21:01,2025-10-12T18:13:09,GB:London
+token_refresh,user_056,user056@example.com,168.249.40.20,bf5a5f52f16e4503ba071de13d45113f,2025-10-11T08:50:16,2025-10-11T08:27:10,BR:São Paulo
+suspicious_login,user_051,user051@example.com,11.89.137.110,0fcbc5be98b0433daf8a4b75e8ece4e5,2025-10-09T05:04:32,,RU:Moscow
+login_failure,user_039,user039@example.com,40.195.195.168,37b62d86668b4813b2557ce63544f4c2,2025-10-02T22:11:49,,NL:Amsterdam
+password_reset,user_011,user011@example.com,190.114.142.181,c0760bac357043a7ad5f2127393c2e58,2025-10-10T10:35:00,2025-10-10T10:27:22,US:Los Angeles
+account_locked,user_048,user048@example.com,232.45.158.146,08c2821cce9e48c08f9d4044a054b689,2025-10-07T18:25:35,,US:Seattle
+password_reset,user_058,user058@example.com,139.21.36.39,517132e5ac0b49e8ba9e7046da605d42,2025-10-06T06:24:44,2025-10-06T06:14:19,AU:Sydney
+token_refresh,user_016,user016@example.com,193.119.146.157,cf36f5e98bfe4449922bdeccf56ddcfa,2025-10-09T10:21:01,2025-10-09T09:47:17,DE:Berlin
+password_reset,user_048,user048@example.com,107.45.52.34,4f4dc076c97145c1ad85a7a4b1420845,2025-10-12T20:56:23,2025-10-12T20:20:09,CN:Shanghai
+suspicious_login,user_045,user045@example.com,213.161.63.27,9a8cdcf09b9b425b94eddabdc556d496,2025-10-07T18:54:43,,BR:São Paulo
+token_refresh,user_059,user059@example.com,20.221.81.148,d5c95ef8030e4951bde249da6bb93c3b,2025-10-10T11:36:25,2025-10-10T10:47:59,NL:Amsterdam
+login_failure,user_011,user011@example.com,119.98.70.254,1cb95c29acdf421399b085ef1b6b1204,2025-10-13T05:14:43,,DE:Berlin
+token_refresh,user_014,user014@example.com,222.103.232.16,78fce5e6150e4544af8bf884429ffeaa,2025-10-04T20:24:00,2025-10-04T19:57:21,GB:London
+login_success,user_023,user023@example.com,58.167.18.200,66fc9853be8a41b2a946fb988a5e1385,2025-10-02T04:48:01,2025-10-02T04:31:09,CA:Toronto
+login_failure,user_009,user009@example.com,202.145.53.18,cb41dc79c965469bad5c41ac32d2529a,2025-10-13T03:13:37,,CA:Toronto
+suspicious_login,user_019,user019@example.com,252.26.214.50,4afe425c52b84073a8704592d71b5500,2025-10-07T15:14:23,,BR:São Paulo
+login_failure,user_030,user030@example.com,142.38.99.49,b887a289d3364e57a5d24ec3c535dbfe,2025-10-14T02:32:47,,US:New York
+account_locked,user_013,user013@example.com,183.80.103.172,e7ec68738e294961935531aeef84002c,2025-10-09T07:28:57,,CN:Shanghai
+login_success,user_018,user018@example.com,198.203.219.107,9c2728f2977046108caf865c6546146d,2025-10-08T14:59:50,2025-10-08T14:25:11,GB:London
+password_reset,user_045,user045@example.com,240.175.166.19,a1f2430862524c6089c580bff96652f1,2025-10-14T07:40:10,2025-10-14T07:03:43,AU:Sydney
+token_refresh,user_056,user056@example.com,235.185.14.248,9388564b21b947d5876f49a13a2a0cdc,2025-10-07T11:38:19,2025-10-07T11:14:19,US:Los Angeles
+account_locked,user_044,user044@example.com,14.39.39.208,f3d0c1a7c8ed41c991da9f70b9e742f9,2025-10-13T08:19:05,,CA:Toronto
+login_failure,user_025,user025@example.com,117.95.172.244,7f4713d544e4404fa5878096c2acd4c3,2025-10-12T20:26:37,,AU:Sydney
+account_locked,user_044,user044@example.com,236.74.59.192,f205d283919643848fb396d0bb99d241,2025-10-03T06:27:06,,NL:Amsterdam
+account_locked,user_010,user010@example.com,233.69.212.37,35c7d78bd2a64755acb616c4f13b7e86,2025-10-02T20:03:10,,GB:London
+password_reset,user_030,user030@example.com,116.10.15.95,e7636e30cdc448028bd7c3043302982b,2025-10-07T10:04:41,2025-10-07T09:05:42,US:Los Angeles
+token_refresh,user_044,user044@example.com,55.131.122.204,2805d34c6c68448daa359f40e9d1ed22,2025-10-04T22:42:05,2025-10-04T22:22:43,CN:Shanghai
+login_failure,user_041,user041@example.com,41.203.175.109,67949702d8174431ab2c6ff79f07c434,2025-10-14T01:04:24,,RU:Moscow
+password_reset,user_019,user019@example.com,41.113.214.140,159e8197960a4d76a4b3f2c02a0bdf0c,2025-10-07T18:39:51,2025-10-07T17:55:13,CN:Shanghai
+login_success,user_021,user021@example.com,156.38.17.33,bb4c3043b32f4ce499b8e5c7fcf8e3f6,2025-10-07T04:39:40,2025-10-07T03:59:43,CN:Shanghai
+suspicious_login,user_031,user031@example.com,75.9.60.74,29b3db0bea66446fb76a2aaa416bbad2,2025-10-07T08:44:55,,CA:Toronto
+suspicious_login,user_002,user002@example.com,233.101.152.145,3b6aa4ae40344eacb9bd12693f4f0fdd,2025-10-01T21:05:41,,CN:Shanghai
+login_failure,user_018,user018@example.com,41.202.180.28,794144f85f20479996b1e601587fbfcd,2025-10-09T11:55:02,,IN:Bengaluru
+password_reset,user_005,user005@example.com,132.61.72.172,7e8b04ca85c04d17b6e0eac0d7feb2bf,2025-10-11T16:13:34,2025-10-11T16:04:33,AU:Sydney
+token_refresh,user_025,user025@example.com,232.198.150.243,e3ed39fcbe1747be818106d92113e60d,2025-10-01T18:54:56,2025-10-01T18:02:41,BR:São Paulo
+login_success,user_048,user048@example.com,142.40.70.73,49e22cf9e6da4e149f3d23cd7edf4554,2025-10-14T05:13:45,2025-10-14T04:50:21,CA:Toronto
+token_refresh,user_008,user008@example.com,64.58.17.87,9b64d42984344e86b7a1a0dd72349dab,2025-10-01T18:37:35,2025-10-01T18:21:53,BR:São Paulo
+suspicious_login,user_027,user027@example.com,57.115.151.72,f08e1b9c2a6c482184afb6e5ec1c95a8,2025-10-01T11:48:51,,US:New York
+suspicious_login,user_036,user036@example.com,144.85.172.32,22a51089fc14481090abf418fb08bbbb,2025-10-10T02:22:55,,NL:Amsterdam
+login_failure,user_043,user043@example.com,27.91.200.144,cbee0eadc65d414b95e1119f2b98c0c0,2025-10-10T00:39:47,,US:New York
+login_success,user_030,user030@example.com,247.20.37.194,3bb1f2b7d0834cfcb58c45dc08f474c5,2025-10-06T03:55:43,2025-10-06T03:06:17,NL:Amsterdam
+suspicious_login,user_022,user022@example.com,223.26.224.217,80696c9bb5e4477c9b3464897da28678,2025-10-10T17:06:33,,US:New York
+token_refresh,user_030,user030@example.com,194.145.195.149,76c74a412e5b497085de791a7986e36d,2025-10-10T21:43:59,2025-10-10T21:05:27,NL:Amsterdam
+token_refresh,user_009,user009@example.com,109.47.72.119,c7753e71ed734082baa353fbc74284c4,2025-10-06T15:55:59,2025-10-06T15:50:51,IN:Bengaluru
+login_failure,user_018,user018@example.com,141.34.238.74,594f5a37901b4431927dedb2eb13256d,2025-10-10T16:56:44,,IN:Bengaluru
+password_reset,user_037,user037@example.com,11.196.194.45,d9164d2d93f5417c9b223f593994aef1,2025-10-11T08:33:41,2025-10-11T08:03:30,GB:London
+login_failure,user_048,user048@example.com,163.249.8.24,0f79958bea6f4b9bbdeea8ab1a9bac79,2025-10-12T15:13:24,,RU:Moscow
+token_refresh,user_018,user018@example.com,117.163.214.94,c4f9467624754d029423d94d5970f5ca,2025-10-04T19:23:22,2025-10-04T19:09:04,NL:Amsterdam
+account_locked,user_059,user059@example.com,85.160.81.170,f45092694971445bb27f215cf4bb0a86,2025-10-03T23:46:57,,GB:London
+token_refresh,user_035,user035@example.com,124.89.86.142,0452d72e80424303b1d770bc780cdbb6,2025-10-12T22:24:29,2025-10-12T22:02:31,CA:Toronto
+account_locked,user_048,user048@example.com,229.140.23.152,3d640450aa264ed6b0cbe2f78aa4a508,2025-10-10T08:02:01,,US:Los Angeles
+account_locked,user_051,user051@example.com,81.112.156.252,94140645d2154f4291c8f7be2b1a2104,2025-10-12T05:07:24,,BR:São Paulo
+token_refresh,user_036,user036@example.com,43.68.136.224,2b19f555746243df867ade559ae9bef4,2025-10-14T06:27:13,2025-10-14T05:50:25,AU:Sydney
+suspicious_login,user_020,user020@example.com,171.105.84.104,84082a05d7c246e891a75c54c82c7cf8,2025-10-07T15:35:08,,IN:Bengaluru
+password_reset,user_019,user019@example.com,54.111.202.149,49b0574ae85a4593a3d20849bf8338cb,2025-10-14T06:41:20,2025-10-14T06:09:36,IN:Bengaluru
+login_success,user_043,user043@example.com,59.198.75.253,c314df4c5b6f456f905111bd4242fc27,2025-10-03T00:54:14,2025-10-02T23:55:05,US:Los Angeles
+login_failure,user_002,user002@example.com,185.220.101.23,534f2a7ff67c4f01a212444bc4ed6255,2025-10-12T03:14:15,,RU:Moscow
+account_locked,user_028,user028@example.com,177.65.117.217,48cf6fe91a4a4a1f8a7210fe03d4cd86,2025-10-07T18:12:24,,IN:Bengaluru
+login_success,user_038,user038@example.com,7.238.80.148,d73c7ed8c37046b7ade059369900bd89,2025-10-09T08:25:45,2025-10-09T08:12:13,US:Los Angeles
+login_success,user_006,user006@example.com,76.57.104.178,f3a436610ab845b0909d406bc2b31bc7,2025-10-06T12:19:42,2025-10-06T11:40:00,DE:Berlin
+account_locked,user_045,user045@example.com,2.229.193.221,340a004b668c4de8b44221f3312d1511,2025-10-03T14:49:27,,CA:Toronto
+login_failure,user_056,user056@example.com,42.250.205.208,95d913053c4442968021f7b118b413cd,2025-10-05T02:56:26,,US:Seattle
+login_success,user_016,user016@example.com,98.147.92.148,c7d5eebcf80945e0b8a9048ef61b0331,2025-10-07T15:44:18,2025-10-07T15:42:49,NL:Amsterdam
+login_success,user_045,user045@example.com,95.56.114.114,bc380f34f18e4d01bf8f320fd80cc847,2025-10-06T08:54:23,2025-10-06T08:47:37,NL:Amsterdam
+account_locked,user_010,user010@example.com,227.107.168.26,768db8c289b34b64b74d650a07ef0945,2025-10-11T18:39:26,,GB:London
+token_refresh,user_059,user059@example.com,150.37.60.119,f88b9e44b113463997a80d1c1e69da5b,2025-10-06T18:29:16,2025-10-06T17:43:45,US:Seattle
+login_success,user_020,user020@example.com,202.113.9.149,41c711e83c7842518e6cda4a697e31d4,2025-10-09T02:46:08,2025-10-09T02:39:59,GB:London
+login_failure,user_018,user018@example.com,12.250.14.142,f02e97d8a7704d7ba8d2a4d79c3d7a53,2025-10-07T13:44:08,,NL:Amsterdam
+token_refresh,user_002,user002@example.com,29.238.93.225,b311f5d700e4497599b3d32e025d9e57,2025-10-07T21:15:03,2025-10-07T20:58:37,BR:São Paulo
+password_reset,user_059,user059@example.com,87.90.2.47,335fc1c8a1da43d1bc8f5bc3852e2a44,2025-10-04T09:36:42,2025-10-04T09:09:21,US:Los Angeles
+login_failure,user_001,user001@example.com,19.182.162.16,ef7d944b4d81431c82755293eb078a97,2025-10-06T05:04:57,,US:Seattle
+account_locked,user_057,user057@example.com,195.125.224.139,e143c9c746c042cea85dd99f27113136,2025-10-02T02:39:04,,CA:Toronto
+suspicious_login,user_053,user053@example.com,185.229.130.110,d36bf98896e2455288a3042ff6e91729,2025-10-13T00:28:57,,US:New York
+account_locked,user_016,user016@example.com,147.99.60.220,75985dc70ff242b883152d37027f27df,2025-10-10T02:02:20,,AU:Sydney
+password_reset,user_050,user050@example.com,205.59.156.206,2bfb07f1ffdd490b9e5a5baee23e44d7,2025-10-08T20:14:40,2025-10-08T20:01:42,BR:São Paulo
+account_locked,user_053,user053@example.com,166.209.38.61,82f437d36e6b4320b5d7c25ff6f28719,2025-10-03T12:09:16,,CA:Toronto
+token_refresh,user_022,user022@example.com,172.174.205.104,c1627c4f77a64188bd37779f2743ad80,2025-10-04T20:53:29,2025-10-04T20:44:47,BR:São Paulo
+account_locked,user_026,user026@example.com,167.21.219.85,55f223bc50f946ddaf91f17043becd8a,2025-10-12T17:24:20,,NL:Amsterdam
+password_reset,user_051,user051@example.com,15.76.92.96,c8f69ec023274233b26b94ba3cae70df,2025-10-10T12:09:15,2025-10-10T11:33:00,RU:Moscow
+token_refresh,user_029,user029@example.com,67.193.64.216,a4cef9a1911747909beb9879d738791e,2025-10-07T05:49:49,2025-10-07T05:14:14,IN:Bengaluru
+token_refresh,user_058,user058@example.com,74.174.140.41,484bb9365b2b4b24a3b0cc5d67c3d2ef,2025-10-02T21:28:22,2025-10-02T20:48:16,GB:London
+login_failure,user_038,user038@example.com,153.11.159.21,2977fe6241584ea4b5e9fc56ecb5aa5a,2025-10-10T06:42:37,,BR:São Paulo
