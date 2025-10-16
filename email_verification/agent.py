@@ -38,6 +38,23 @@ class EmailVerificationAgent:
         self.rule_executor = RuleExecutor(rules, logger=self.logger)
         self._stop = Event()
 
+    def stop(self) -> None:
+        """Signal the agent's run loop to stop."""
+        self._stop.set()
+
+    def process_events(self, events: Iterable[Dict[str, Any]]) -> None:
+        """Process a finite iterable of events synchronously.
+
+        This is useful for demos, tests, and batch processing where a long-lived
+        consumer loop is not desired.
+        """
+        ctx = self._build_context()
+        for ev in events:
+            start = time.perf_counter()
+            self.rule_executor.execute(ev, ctx)
+            self.metrics.inc("events_processed")
+            ctx.metrics.time("event_processing_ms", (time.perf_counter() - start) * 1000.0)
+
     def _build_context(self) -> RuleContext:
         def sink(alert: Alert) -> None:
             self.alert_sink(alert)
