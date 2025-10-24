@@ -160,5 +160,119 @@ Contributions: open issues and PRs with a clear problem statement, rationale, an
 
 ### Safety and Data Handling
 - OT collection is designed as passive, read-only; no writes back into ICS.
+
+
+
 - Follow `docs/service_accounts_and_secrets.md` and `config.yaml` guidance for secrets, PII minimization, and retention.
 
+# Stakeholder Interviews
+
+**Question:**  
+From your perspective, does this design align with general cybersecurity compliance best practices?
+
+**Responses:**
+- We do something similar, there is already a check process.  
+- Assess if it is the correct person.  
+- Seems realistic.
+
+---
+
+## Initial Concerns or Red Flags
+
+**Question:**  
+What are your initial concerns or red flags when you see this design?
+
+**Concerns:**
+- Getting bombarded with more emails, notifications, and other things to jump through to make things work and function.
+- **Q:** If there is only one point of access to the job (laptop), but I only have one point of access, how would I be able to get access to the system?  
+  Seems like I'm locked out until this verification takes place.  
+  Contractors usually only have 1 POA.
+- **Q:** IT swap situation — how will this accommodate for changing devices?
+- Sometimes we use access to VPN to get to the system.
+- Has a firewall and the work we do is safe.
+
+---
+
+## Stronger Access Control, Auditing, or Encryption
+
+**Question:**  
+Are there any parts of this system where stronger access control, auditing, or encryption would be necessary?
+
+**Responses:**
+- We need to make sure the people who are ok to come in are able to come in.  
+- There is a balancing act where we need to be selective about who we are inviting.  
+- Energy sector has massive damage potential → high necessity.  
+- This is the nature of the grid across the board — they are connected to others, that affects the entire grid.  
+- The backups from one utility are from neighboring utility companies.  
+- Mentions FERC/NERC?  
+- There are no competitors — we are all on the same level going towards the same goal.
+
+---
+
+## Threat-Sharing Systems
+
+**Question:**  
+Are there current threat-sharing systems? Would companies want to share that information?
+
+**Responses:**
+- IDK what exists in the system.  
+- I would have a guess that there is some sort of reporting requirement — that there is a reporting system that goes up to NERC that diagnoses and resolves the issue.  
+- There may exist a more auto-system.  
+- Being in the energy sector, it would be easier to do sharing than others.  
+- We are considered a regulated monopoly.  
+- **Regulated monopoly:**  
+  - We cannot control prices — those are controlled through government processes.  
+  - We have systems that are bureaucratic red tapes.
+
+**Additional Notes:**
+- We are given monopoly power over a region of territory.  
+- We are the only ones in control of the territory, but we share and partner with other utilities.  
+  - **Examples:** EPA (federal major entity), Seattle City Light (public), Tacoma Power (public).  
+- Don’t compete because we all deal with separate customer bases.  
+- That allows us to coordinate and work together instead of compete.  
+- We are a team that works together to protect the grid and the customers.
+
+---
+
+## Scalability from a Compliance Perspective
+
+**Question:**  
+How scalable is this design from a compliance perspective as regulations evolve?
+
+**Responses:**
+- I don’t know.  
+- The role is the end-user.  
+- **Q:** What do you mean by scalability?  
+- **Private vs. public.**  
+- **Large vs. small.**  
+- **P:** Scalability meaning how easy will it be to meet changes in cyber requirements. Any thoughts?  
+- Part of it is going to be based on what the federal government wants us to do.  
+- There is a component where NERC has the most up-to-date requirements and we have to follow.  
+- From my perspective it is entirely up to this independent but public agency (NERC) to set the regulations.  
+- Also subject to their own game of politics.  
+- Up to how modern these policymakers are in their regulations and the flexibility within these policies.  
+- Usually looks at if it fits within the scope.
+
+---
+
+## Communication and Coordination
+
+**Question:**  
+What is the main way of communicating with other companies?
+
+**Responses:**
+- Tech related — he doesn’t know.  
+- As employees, regular communication.  
+- Outlook work email.  
+- Only communications through work devices.  
+- Regulations exist here.  
+
+**Notes:**
+- **Paired substations:**  
+  - Substations next to each other.  
+  - Allow the electrons to flow to different grids.  
+- Meters are always being read.  
+- Lots of sharing information.  
+- Not a competitive nature.
+
+---
