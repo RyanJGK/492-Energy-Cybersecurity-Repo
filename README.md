@@ -1,12 +1,12 @@
 # Agentic AI for Energy Defense
 
-##### Table of Contents
--[Features] (###Features)
--[Istallation, Usage and Environment] (###Installation)
--[Folder Structure] (### Folder Struture)
--[Technologies Used] (### Technologies Used)
--[Stakeholder Interviews] (# Stakeholder Interviews)
--[Student Feedback Summary] (# Student Feedback LLM Summary)
+## Table of Contents
+- [Features](#features)
+- [Installation, Usage, and Environment](#installation-usage-and-environment)
+- [Folder Structure](#folder-structure)
+- [Technologies Used](#technologies-used)
+- [Stakeholder Interviews](#stakeholder-interviews)
+- [Student Feedback Summary](#student-feedback-summary)
 
 
 
