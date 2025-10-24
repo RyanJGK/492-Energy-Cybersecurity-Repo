@@ -278,7 +278,7 @@ What is the main way of communicating with other companies?
 ---
 
 
-#Student Feedback LLM summarization
+# Student Feedback LLM Summary
 
 Our peers valued these overarching themes, as evident from the feedback given for the demos:
 
