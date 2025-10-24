@@ -182,7 +182,7 @@ From your perspective, does this design align with general cybersecurity complia
 
 ---
 
-## Initial Concerns or Red Flags
+### Initial Concerns or Red Flags
 
 **Question:**  
 What are your initial concerns or red flags when you see this design?
@@ -198,7 +198,7 @@ What are your initial concerns or red flags when you see this design?
 
 ---
 
-## Stronger Access Control, Auditing, or Encryption
+### Stronger Access Control, Auditing, or Encryption
 
 **Question:**  
 Are there any parts of this system where stronger access control, auditing, or encryption would be necessary?
@@ -214,7 +214,7 @@ Are there any parts of this system where stronger access control, auditing, or e
 
 ---
 
-## Threat-Sharing Systems
+### Threat-Sharing Systems
 
 **Question:**  
 Are there current threat-sharing systems? Would companies want to share that information?
@@ -239,7 +239,7 @@ Are there current threat-sharing systems? Would companies want to share that inf
 
 ---
 
-## Scalability from a Compliance Perspective
+### Scalability from a Compliance Perspective
 
 **Question:**  
 How scalable is this design from a compliance perspective as regulations evolve?
@@ -260,7 +260,7 @@ How scalable is this design from a compliance perspective as regulations evolve?
 
 ---
 
-## Communication and Coordination
+### Communication and Coordination
 
 **Question:**  
 What is the main way of communicating with other companies?
