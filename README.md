@@ -1,5 +1,15 @@
 # Agentic AI for Energy Defense
 
+##### Table of Contents
+[Features] (###Features)
+[Istallation, Usage and Environment] (###Installation)
+[Folder Structure] (### Folder Struture)
+[Technologies Used] (### Technologies Used)
+[Stakeholder Interviews] (# Stakeholder Interviews)
+[Student Feedback Summary] (# Student Feedback LLM Summary)
+
+
+
 A reference lab for identity/email verification analytics and OT (Industrial Control Systems) network tracking. This repository includes a lightweight rules engine for email verification abuse/fraud signals and an OT traffic collector plus tracking agent that normalizes industrial protocol frames and evaluates baseline/zoning policies. It ships with runnable demos, a docker-compose lab, and example dashboards/detections for SIEM/SOAR.
 
 ### Features
@@ -126,20 +136,6 @@ Policy knobs used by the email verification rules (when provided in `cfg`):
 ├─ docker-compose.lab.yml       # Lab stack: Kafka/ZK/Postgres/Schema Registry + services
 └─ tests/                       # Minimal unit tests for rules/agent
 ```
-
----
-
-### Development and Contribution
-
-Run tests locally:
-```bash
-pip install pytest
-pytest -q
-```
-
-Code style: readable, typed Python; prefer small, testable units. For substantial changes, include tests in `tests/`.
-
-Contributions: open issues and PRs with a clear problem statement, rationale, and test/usage notes.
 
 ---
 
