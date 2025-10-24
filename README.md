@@ -1,4 +1,4 @@
-# ICS Security Monitoring Lab
+# Agentic AI for Energy Defense
 
 A reference lab for identity/email verification analytics and OT (Industrial Control Systems) network tracking. This repository includes a lightweight rules engine for email verification abuse/fraud signals and an OT traffic collector plus tracking agent that normalizes industrial protocol frames and evaluates baseline/zoning policies. It ships with runnable demos, a docker-compose lab, and example dashboards/detections for SIEM/SOAR.
 
