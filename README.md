@@ -276,3 +276,14 @@ What is the main way of communicating with other companies?
 - Not a competitive nature.
 
 ---
+
+
+#Student Feedback LLM summarization
+
+Our peers valued these overarching themes, as evident from the feedback given for the demos:
+
+Clear Focus and Scope
+Strong Technical Foundations 
+Explanability
+Professionalism in Presentation
+
