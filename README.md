@@ -169,7 +169,8 @@ Contributions: open issues and PRs with a clear problem statement, rationale, an
 
 **Google Doc with Real + Synthetic Interviews and Prompts:**  
 [Doc File](https://docs.google.com/document/d/1RnQuQxmN26TGWpf7Kb0vvmAiG7csEasHnDN-DLE-pmE/edit?usp=sharing)
- 
+
+ ## Below is just the Real Interview Responses
 
 **Question:**  
 From your perspective, does this design align with general cybersecurity compliance best practices?
